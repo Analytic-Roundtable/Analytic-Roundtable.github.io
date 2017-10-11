@@ -1,1 +1,18 @@
 theme: jekyll-theme-architect
+
+# Site settings
+title:        Analytic Roundtable
+tagline:      Collaboration in data analytics.
+description:  developer content for industry consortium
+logo: img/analytic-roundtable-logo.png
+
+# About/contact
+author:   ubaldino@mitre.org
+
+baseurl:      ""
+url: http://analytic-exchange.github.io
+
+#Build settings
+markdown: kramdown
+kramdown:
+auto_ids: true
