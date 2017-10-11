@@ -1,3 +1,5 @@
+![Analytic Roundtable](./img/analytic-roundtable-logo.png)
+
 # Analysis-Exchange
 Top level material related to the Analysis Exchange architecture effort
 
