@@ -2,9 +2,7 @@ Welcome to the developer site for the Analysis Exchange (AE).
 
 This effort is guided by the industry consortium Analytic Technology Industry Roundtable. As the name implies, the AE is a set of design patterns and ontologies for exchanging data between analytic solutions.  While the AE offers a system concept for exchanging data, the focus is on the partnerships formed among analytic technology organizations. The aim of these partnerships is to achieve common goals and efficiencies, build competitive advantages, and more effectively respond to customer needs by sharing information. 
 
-The AE debuts November 2017. As a developer, domain analyst, integrator, or visionary, you're encouraged to learn more about the AE and how it can benefit your organization. The projects listed here are examplars of Roundtable partnerships. 
-
-The documents below provide an overview of the Analysis Exchange and the Analytic Technolgy Industry Roundtable:
+The AE debuts November 2017. As a developer, domain analyst, integrator, or visionary, you're encouraged to learn more about the AE and how it can benefit your organization. The projects listed here are examples of Roundtable partnerships.  The documents below provide an overview of the AE and the Analytic Technology Industry Roundtable:
 
 * [Harnessing the Power of Partnerships to Advance Data Analytics](http://technologyroundtable.org/pdfs/Roundtable2.pdf)
 * [Understanding the Impact of the Analysis Exchange Model 1.0](http://technologyroundtable.org/pdfs/AE-Impact-Whitepape.pdf)
