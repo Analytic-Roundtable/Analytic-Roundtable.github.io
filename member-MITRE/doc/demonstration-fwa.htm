@@ -70,13 +70,21 @@
         <p>Refer to the <a href="install.htm">Installation</a> Section.<br>
         </p>
         <h1>Demo Pipeline Logic</h1>
-        <p>In all command invocations of the Tangerine Test Client, the
-          arguments <tt>-hostName localhost</tt> are assumed as they
-          are the default.&nbsp; Let's assume we are processing CLAIM =
-          <tt>ClaimDataset/3000000.csv</tt>, a pipe-delimited file.<br>
+        <p>The logic for the automating this use case is in the script <br>
+          &nbsp;&nbsp;&nbsp; <tt>./demo/Fraud,Waste,Abuse-Demo/pipeline.py</tt>.&nbsp;
           <br>
-          For the sake of development, the ingest and processing of a
-          single claim is captured in a Tangerine database <b><i>collection</i></b>
+          In all command invocations of the Tangerine Test Client, the
+          arguments <tt>-host localhost -port 8080</tt> are assumed as
+          they are the default.&nbsp; Let's assume we are processing the
+          claims data = <tt>data/AllClaims.csv </tt>and the companion
+          identifying data,<tt> ./data/Person.csv</tt><br>
+          <br>
+          The demonstration starts with a list of claims;&nbsp; the
+          description of the analytic exchanges in steps 1 through 8
+          below operates on a single claim, e.g., the pipeline(file)
+          function consumes a file with one record.&nbsp;&nbsp; For the
+          sake of development, the ingest and processing of a single
+          claim is captured in a Tangerine database <b><i>collection</i></b>
           dedicated to that claim.<br>
           <br>
           The primary unit of data dealt with inside Tangerine is an <b>
@@ -87,9 +95,12 @@
         </p>
         <h2>1. INGEST AND ADAPT CLAIM VOUCHER DATA<br>
         </h2>
+        The ingest phase demonstrates how single records are parsed and
+        adapted as they are submitted to the Transfer Services.<br>
+        <br>
         <b>PHASE</b>: INGEST<br>
-        <b>COMMAND</b>:&nbsp; java -jar client.jar&nbsp; -insert CLAIM
-        -type voucher -delimiter \\|'<br>
+        <b>COMMAND</b>:&nbsp; java -jar client.jar insert
+        ./one-record.csv org.mitre.tangerine.analytic.VoucherAdapter<br>
         <b>RESULT</b>:&nbsp; Raw claim is parsed and inserted into
         collection with a generated ID, <tt>VO_dd0c519a_7867_48d7_b369_36b2061026d4_1506546040840</tt><br>
         <br>
@@ -130,21 +141,20 @@
         collection ID aka <font face="Courier New, Courier, monospace">CLAIM_UUID</font><br>
         <br>
         <b>PHASE</b>: QUERY<br>
-        <b>INPUT</b>: tangerine/flora/flquery-config-voucher.json<br>
+        <b>INPUT</b>: config/flquery-config-voucher.json<br>
         <b>COMMAND</b>: <br>
         <br>
         <font face="Courier New, Courier, monospace">&nbsp;&nbsp;&nbsp;&nbsp;
 
 
-          java -jar client.jar -reasoner \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -configuration
-          tangerine/flora/flquery-config-voucher.json \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -ontologies
-          tangerine/flora/AE.flr \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -queries
-          tangerine/flora/voucher.qry</font><br>
+
+          java -jar client.jar reason \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          config/flquery-config-voucher.json \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; config/AE.flr \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; configvoucher.qry</font><br>
         <b><br>
-          RESULT</b>:&nbsp; output/ReasonerNetOwl.json now contains
+          RESULT</b>:&nbsp; working/ReasonerNetOwl.json now contains
         selected data for CLAIM<br>
         <br>
         <h2>3. PARSE QUERY RESULT INTO USABLE ASSERTIONS</h2>
@@ -156,8 +166,9 @@
         <b>PHASE</b>: ADAPTATION / INTERPRETATION OF QUERY RESULTS<br>
         <br>
         <blockquote><font face="Courier New, Courier, monospace"># Some
-            Python code to illustrate navigating a <br>
-            # Flora query result, which is a JSON formatted response<br>
+            Python code to illustrate navigating a <b><i>Flora</i></b>
+            query result, <br>
+            # which is a JSON formatted response<br>
             names = []<br>
             namesUUID = []<br>
             addresses = []<br>
@@ -273,20 +284,26 @@
         <b>COMMAND</b>: <br>
         <br>
         <font face="Courier New, Courier, monospace">&nbsp;&nbsp;&nbsp;
-          java -jar client.jar -insert
+          java -jar client.jar insert
           ./output/&lt;ClaimaintName_UUID&gt;_netowlapp.xml \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -type netowl -entity
-          "entity:person" -uuid &lt;ClaimaintName_UUID&gt;<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          org.mitre.tangerine.analytic.NetOwlAdapter \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; --entity "entity:person"
+          --uuid &lt;ClaimaintName_UUID&gt;<br>
           <br>
-          &nbsp;&nbsp;&nbsp; java -jar client.jar -insert
+          &nbsp;&nbsp;&nbsp; java -jar client.jar insert
           ./output/&lt;Address_UUID&gt;_netowlapp.xml \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -type netowl -entity
-          "entity:address:mail" -uuid &lt;Address_UUID&gt;<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          org.mitre.tangerine.analytic.NetOwlAdapter \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; --entity
+          "entity:address:mail" --uuid &lt;Address_UUID&gt;<br>
           <br>
-          &nbsp;&nbsp;&nbsp; java -jar client.jar -insert
+          &nbsp;&nbsp;&nbsp; java -jar client.jar insert
           ./output/&lt;Expense_UUID&gt;_netowlapp.xml \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -type netowl -entity
-          "entity:currency:money" -uuid &lt;Expense_UUID&gt;</font><br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          org.mitre.tangerine.analytic.NetOwlAdapter \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; --entity
+          "entity:currency:money" --uuid &lt;Expense_UUID&gt;</font><br>
         <br>
         <b>RESULT</b>:&nbsp; New value-added assertions are added to the
         AE Knowledge Store &nbsp; <br>
@@ -296,23 +313,22 @@
         Next Flora is used again to compose a query to retrieve
         currency/monetary data from the particular claim.&nbsp; The
         resulting instances of currency are trivially associated with
-        the claim as being "itemized expenses"<br>
+        the claim as being "itemized expenses".&nbsp; The data specifics
+        for the query are in the JSON file.<br>
         <br>
         <b>COMMAND</b>:&nbsp; <br>
         <font face="Courier New, Courier, monospace">&nbsp;&nbsp;&nbsp;
-          java -jar client.jar -reasoner \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -configuration
-          tangerine/flora/flquery-config-voucher.json \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -ontologies
-          tangerine/flora/AE.flr \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -queries
-          tangerine/flora/currency.qry<br>
+          java -jar client.jar reason \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          config/flquery-config-voucher.json \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; config/AE.flr \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; config/currency.qry<br>
         </font><br>
-        <b>RESULT</b>:&nbsp; output/ReasonerCurrency.json<br>
+        <b>RESULT</b>:&nbsp; working/ReasonerCurrency.json<br>
         <br>
         The result is parsed and new assertion with the Boolean flag
         "hasItemizedExpense" is asserted.<br>
-        This assertion is staged in <b>./output/currency.txt</b>, then
+        This assertion is staged in <b>./working/currency.txt</b>, then
         loaded with the test client. The following assertion is an
         example of what this data linking looks like.<br>
         <font face="Courier New, Courier, monospace"><br>
@@ -328,11 +344,12 @@
         <b>COMMAND</b>: <br>
         <br>
         &nbsp;&nbsp;&nbsp;<font face="Courier New, Courier, monospace">
-          java -jar client.jar -insert output/currency.txt -type general</font><br>
+          java -jar client.jar insert working/currency.txt \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          org.mitre.tangerine.analytic.GeneralAdapter</font><br>
         <br>
         <b>RESULT</b>: final boolean assertion is made and saved to
         Knowledge Store.<br>
-        <br>
         <br>
         <h2>6. ASSOCIATE PII TO CLAIM<br>
         </h2>
@@ -341,13 +358,11 @@
         <b>COMMAND</b>:&nbsp; <br>
         <br>
         <font face="Courier New, Courier, monospace">&nbsp;&nbsp;&nbsp;
-          java -jar client.jar -reasoner \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -configuration
-          tangerine/flora/flquery-config-voucher.json \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -ontologies
-          tangerine/flora/AE.flr \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -queries
-          tangerine/flora/pii.qry</font><br>
+          java -jar client.jar reason \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          config/flquery-config-voucher.json \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; config/AE.flr \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; config/pii.qry</font><br>
         <br>
         <b>INTERMEDIATE RESULT</b>: The query results in PII data in the
         claim, in particularly social security numbers (SSN). <br>
@@ -359,11 +374,12 @@
         <br>
         <b>COMMAND</b>: <br>
         <font face="Courier New, Courier, monospace">&nbsp;&nbsp;&nbsp;
-          java -jar client.jar -insert PiiDataset/&lt;SSN&gt;.csv \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -type pii -uuid
-          &lt;PERSON_UUID&gt; <br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -entity SSN -foreignKey
-          &lt;SSN&gt; -delimiter \\|</font><br>
+          java -jar client.jar insert working/temp.csv \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          org.mitre.tangerine.analytic.PiiAdapter --uuid
+          &lt;PERSON_UUID&gt; \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; --entity SSN --key
+          &lt;SSN&gt; </font><br>
         <br>
         <b>RESULT</b>: PII data is ingested, amplifying the claimaint's
         profile<br>
@@ -386,13 +402,11 @@
         <b>COMMAND</b>:<br>
         <br>
         <font face="Courier New, Courier, monospace">&nbsp;&nbsp;&nbsp;
-          java -jar client.jar -reasoner \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -configuration
-          tangerine/flora/flquery-config-voucher.json \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -ontologies
-          tangerine/flora/AE.flr \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -queries
-          tangerine/flora/esri.qry</font><br>
+          java -jar client.jar reason \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          config/flquery-config-voucher.json \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; config/AE.flr \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; config/esri.qry</font><br>
         <br>
         <b>RESULT</b>: The query result contains UUID for claim data
         that have a non-null origin and destination.&nbsp; <br>
@@ -421,20 +435,18 @@
 
 
 
+
             travel_calc)</font><br>
         </blockquote>
         <b>COMMAND</b>: <br>
         <br>
         <font face="Courier New, Courier, monospace">&nbsp;&nbsp;&nbsp;
-          java -jar client.jar -insert output/<i>TRAVEL_UUID</i>_esri.csv
-
-
-
-
-          \<br>
-          &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp; -type esri -uuid TRAVEL_UUID -entity
-          "AE#Travelling" </font><br>
+          java -jar client.jar insert output/<i>TRAVEL_UUID</i>_esri.csv
+          \&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          org.mitre.tangerine.analytic.EsriAdapter \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; --uuid
+          TRAVEL_UUID --entity "AE#Travelling" </font><br>
         <br>
         <br>
         <h2>8. FINAL ASSEMBLED OUTPUT</h2>
@@ -450,14 +462,13 @@
         <b>COMMAND</b>:<br>
         <br>
         <font face="Courier New, Courier, monospace">&nbsp;&nbsp;&nbsp;
-          java -jar client.jar -reasoner \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -configuration
-          tangerine/flora/&lt;CLAIM_UUID&gt;.json \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -ontologies
-          tangerine/flora/AE.flr \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -queries
-          tangerine/flora/final.qry \<br>
-          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -outputType csv</font><br>
+          java -jar client.jar reason \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          results/&lt;CLAIM_UUID&gt;.json \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; config/AE.flr \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; config/final.qry \<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -o
+          org.mitre.tangerine.adapter.outbound.CsvAdapter</font><br>
         <br>
         <b>RESULT</b>:&nbsp; The response is saved locally to a file <tt>
           ./results/CLAIM_UUID_final.csv</tt>, for example <tt>results/VO_dd0c519a_7867_48d7_b369_36b2061026d4_1506546040840.csv</tt><br>
