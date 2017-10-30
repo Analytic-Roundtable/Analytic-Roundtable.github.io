@@ -21,7 +21,8 @@ This site provides technical documents, use cases and reference implementations 
 These Use Case projects are available in full here:
 UseCase-FraudWasteAbuse
 * **Fraud, Waste and Abuse:** analyze travel vouchers for potential fraud.  The reference implementation of the AE Model 1.0 is featured in this project. \[[Project](https://github.com/Analytic-Roundtable/UseCase-FraudWasteAbuse)\] \[[Description](https://github.com/Analytic-Roundtable/UseCase-FraudWasteAbuse/blob/master/Travel-Voucher-and-MedicalClaims-UseCase-v4.pdf)\]
-* **Threat Assessment:** assess public domain data for regions with security concerns. \[[Project](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment)\] \[[Description](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment/blob/master/UseCase-ThreatAssessment-v4.pdf)\]
+* **Threat Assessment:** assess public domain data for regions with security concerns.
+  \[[Project](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment)\] \[[Description](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment/blob/master/UseCase-ThreatAssessment-v4.pdf)\]
 * **Cyber Forensics:** support cyber investigations. \[[Project](https://github.com/Analytic-Roundtable/UseCase-CyberForensics)\] \[[Description](https://github.com/Analytic-Roundtable/UseCase-CyberForensics/blob/master/Cyber%20Use%20Case.pdf)\]
 
 
