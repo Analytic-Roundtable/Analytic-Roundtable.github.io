@@ -1,4 +1,3 @@
-![Analytic Roundtable](./img/analytic-roundtable-logo.png)
 
 Welcome to the developer site for the Analysis Exchange (AE), an effort guided by the industry consortium [Analytic Technology Industry Roundtable](http://technologyroundtable.org).  As the name implies the Exchange is a set of design patterns and ontologies for exchanging data between analytic solutions. There are limits to these ideas and technologies and the emphasis should be on the partnerships between organizations that partake in the mission where the analysis occurs. As a developer, domain analyst, integrator or visionary you have a role as a part of a team where ideas like the AE would be used.  The projects here are examplars of that partnership so far -- The AE debuts November 2017.
 
@@ -25,4 +24,5 @@ These Use Case projects are available in full here:
   \[[Project](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment)\] \[[Description](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment/blob/master/UseCase-ThreatAssessment-v4.pdf)\]
 * **Cyber Forensics:** support cyber investigations. \[[Project](https://github.com/Analytic-Roundtable/UseCase-CyberForensics)\] \[[Description](https://github.com/Analytic-Roundtable/UseCase-CyberForensics/blob/master/Cyber%20Use%20Case.pdf)\]
 
+![Analytic Roundtable](./img/analytic-roundtable-logo.png)
 <center>Copyright © 2017, The MITRE Corporation. All rights reserved. </center>
