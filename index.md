@@ -26,3 +26,4 @@ UseCase-FraudWasteAbuse
 * **Cyber Forensics:** support cyber investigations. \[[Project](https://github.com/Analytic-Roundtable/UseCase-CyberForensics)\] \[[Description](https://github.com/Analytic-Roundtable/UseCase-CyberForensics/blob/master/Cyber%20Use%20Case.pdf)\]
 
 
+Copyright MITRE Corporation, 2017. All Rights Reserved.
