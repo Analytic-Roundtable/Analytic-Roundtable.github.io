@@ -12,8 +12,8 @@ The AE debuts November 2017. As a developer, domain analyst, integrator, or visi
 <h1>Technical Materials</h1>
 This site provides technical documents, use cases and reference implementations that embody the Analysis Exchange. After reading the design document above, the next logical items to digest are the ontologies and then the use cases to see how they are applied.  All of this information is hosted on GitHub at [https://github.com/Analytic-Roundtable](https://github.com/Analytic-Roundtable).  These resources are also summarized in a [flyer](http://technologyroundtable.org/pdfs/Roundtable-Resources.pdf)
 
-* [Upper Ontology for the Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/master/blob/AnalysisExchange-Upper-Ontology-2017.pdf)
-* [Domain Ontology for the Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/master/blob/AnalysisExchange-Domain-Ontologies-2017.pdf)
+* [Upper Ontology for the Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/raw/master/AnalysisExchange-Upper-Ontology-2017.pdf)
+* [Domain Ontology for the Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/raw/master/AnalysisExchange-Domain-Ontologies-2017.pdf)
 * [Adaptation Guide for Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/PENDING)
 * The three use cases exhibited in the Model 1.0 debut are described in this 
   [flyer](http://technologyroundtable.org/pdfs/Roundtable-Three-Use-Cases.pdf).
@@ -22,11 +22,11 @@ These Use Case projects are available in full here:
 
 * **Fraud, Waste and Abuse:** analyze travel vouchers for potential fraud.  The reference implementation of the AE Model 1.0 is featured in this project. 
 
-    [<b><a href="https://github.com/Analytic-Roundtable/UseCase-FraudWasteAbuse" target="new">Project</a></b>] \[**[Description](https://github.com/Analytic-Roundtable/UseCase-FraudWasteAbuse/blob/master/Travel-Voucher-and-MedicalClaims-UseCase-v4.pdf)**\]
+    [<b><a href="https://github.com/Analytic-Roundtable/UseCase-FraudWasteAbuse" target="new">Project</a></b>] \[**[Description](https://github.com/Analytic-Roundtable/UseCase-FraudWasteAbuse/raw/master/Travel-Voucher-and-MedicalClaims-UseCase-v4.pdf)**\]
 
 * **Threat Assessment:** assess public domain data for regions with security concerns.
 
-    [<b><a href="https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment" target="new">Project</a></b>] \[**[Description](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment/blob/master/UseCase-ThreatAssessment-v9.pdf)**\]
+    [<b><a href="https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment" target="new">Project</a></b>] \[**[Description](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment/raw/master/UseCase-ThreatAssessment-v9.pdf)**\]
 
 * **Cyber Forensics:** support cyber investigations. \[Content pending\]
 
