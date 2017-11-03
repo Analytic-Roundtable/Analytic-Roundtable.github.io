@@ -13,9 +13,9 @@ Technical Materials
 ===================
 This site provides technical documents, use cases and reference implementations that embody the Analysis Exchange. After reading the design document above, the next logical items to digest are the ontologies and then the use cases to see how they are applied.  All of this information is hosted on GitHub at [https://github.com/Analytic-Roundtable](https://github.com/Analytic-Roundtable).  These resources are also summarized in a [flyer](http://technologyroundtable.org/pdfs/Roundtable-Resources.pdf)
 
-* [Upper Ontology for the Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/doc/AnalysisExchange-Upper-Ontology-2017.pdf)
-* [Domain Ontology for the Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/doc/AnalysisExchange-Domain-Ontologies-2017.pdf)
-* [Adaptation Guide for Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/doc)
+* [Upper Ontology for the Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/master/blob/AnalysisExchange-Upper-Ontology-2017.pdf)
+* [Domain Ontology for the Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/master/blob/AnalysisExchange-Domain-Ontologies-2017.pdf)
+* [Adaptation Guide for Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/PENDING)
 * The three use cases exhibited in the Model 1.0 debut are described in this 
   [flyer](http://technologyroundtable.org/pdfs/Roundtable-Three-Use-Cases.pdf).
 
@@ -27,11 +27,11 @@ These Use Case projects are available in full here:
 
 * **Threat Assessment:** assess public domain data for regions with security concerns.
 
-    \[[Project](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment)\] \[[Description](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment/blob/master/UseCase-ThreatAssessment-v4.pdf)\]
+    \[[Project](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment)\] \[[Description](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment/blob/master/UseCase-ThreatAssessment-v9.pdf)\]
 
-* **Cyber Forensics:** support cyber investigations. 
+* **Cyber Forensics:** support cyber investigations. \[Content pending\]
 
-    \[[Project](https://github.com/Analytic-Roundtable/UseCase-CyberForensics)\] \[[Description](https://github.com/Analytic-Roundtable/UseCase-CyberForensics/blob/master/Cyber%20Use%20Case.pdf)\]
+    \[[Project](https://github.com/Analytic-Roundtable/UseCase-CyberForensics)\] \[[Description]\] <!-- (https://github.com/Analytic-Roundtable/UseCase-CyberForensics/blob/master/Cyber%20Use%20Case.pdf)--> 
 
 
 <center>Copyright © 2017, The MITRE Corporation. All rights reserved. </center>
