@@ -4,8 +4,7 @@ theme: jekyll-theme-architect
 title:        Analytic Roundtable
 tagline:      Collaboration in data analytics.
 description:      Collaboration in data analytics.
-#description:  developer content for this industry consortium
-logo: img/analytic-roundtable-logo.png
+logo: img/analytic-roundtable-logo-txt.png
 
 # About/contact
 author:   ubaldino@mitre.org
