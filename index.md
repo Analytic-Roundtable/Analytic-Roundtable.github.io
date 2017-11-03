@@ -9,8 +9,7 @@ The AE debuts November 2017. As a developer, domain analyst, integrator, or visi
 * [Analysis Exchange Model 1.0 Software Design](http://technologyroundtable.org/pdfs/Analysis-Exchange-Model1-Design-2017.pdf)
 * [Why Work with the Roundtable?](http://technologyroundtable.org/pdfs/Why-Work-With-The-Roundtable.pdf) 
 
-Technical Materials
-===================
+<h1>Technical Materials</h1>
 This site provides technical documents, use cases and reference implementations that embody the Analysis Exchange. After reading the design document above, the next logical items to digest are the ontologies and then the use cases to see how they are applied.  All of this information is hosted on GitHub at [https://github.com/Analytic-Roundtable](https://github.com/Analytic-Roundtable).  These resources are also summarized in a [flyer](http://technologyroundtable.org/pdfs/Roundtable-Resources.pdf)
 
 * [Upper Ontology for the Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/master/blob/AnalysisExchange-Upper-Ontology-2017.pdf)
