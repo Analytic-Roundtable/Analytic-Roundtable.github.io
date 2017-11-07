@@ -22,16 +22,20 @@ These Use Case projects are available in full here:
 
 * **Fraud, Waste and Abuse:** analyze travel vouchers for potential fraud.  The reference implementation of the AE Model 1.0 is featured in this project. 
 
-    [<b><a href="https://github.com/Analytic-Roundtable/UseCase-FraudWasteAbuse" target="new">Project</a></b>] \[**[Description](https://github.com/Analytic-Roundtable/UseCase-FraudWasteAbuse/raw/master/Travel-Voucher-and-MedicalClaims-UseCase-v4.pdf)**\]
+    [<b><a href="https://github.com/Analytic-Roundtable/UseCase-FraudWasteAbuse" target="new">Project</a></b>] 
+    \[**Description**\]
+    \[**[Presentation](https://raw.githubusercontent.com/Analytic-Roundtable/UseCase-FraudWasteAbuse/master/Fraud_Waste_Abuse_presentation.pdf)**\]
 
 * **Threat Assessment:** assess public domain data for regions with security concerns.
 
-    [<b><a href="https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment" target="new">Project</a></b>] \[**[Description](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment/raw/master/UseCase-ThreatAssessment-v9.pdf)**\]
+    [<b><a href="https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment" target="new">Project</a></b>]
+    \[**[Description](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment/raw/master/UseCase-ThreatAssessment-v9.pdf)**\]
+    \[**[Presentation](https://github.com/Analytic-Roundtable/UseCase-ThreatAssessment/raw/master/UseCase-ThreatAssessment-presentation-v6.pdf)**\]
 
 * **Cyber Forensics:** support cyber investigations. \[Content pending\]
 
-    [<b><a href="https://github.com/Analytic-Roundtable/UseCase-CyberForensics" target="new">Project</a></b>] \[Description\] 
-    <!-- (https://github.com/Analytic-Roundtable/UseCase-CyberForensics/blob/master/Cyber%20Use%20Case.pdf)--> 
+    \[Project\]<!-- <b><a href="https://github.com/Analytic-Roundtable/UseCase-CyberForensics" target="new">Project</a></b> -->
+    \[Description\] <!-- (https://github.com/Analytic-Roundtable/UseCase-CyberForensics/blob/master/Cyber%20Use%20Case.pdf)--> 
 
 
 <center>Copyright © 2017, The MITRE Corporation. All rights reserved. </center>
