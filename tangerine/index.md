@@ -8,8 +8,10 @@ title: Tangerine
 
 Tangerine is MITRE's prototype that demonstrates the ideas in the Analysis Exchange [MITRE 1]. The scope of this prototype is three-fold:
  - Demonstrate the [Transfer Services]({{ site.baseurl }}{% link tangerine/transfer-services.md  %}) for exchanging raw inputs and analytic results on them
- - Provide a <a href="test-client.htm">test client</a> to exercise the services
- - Illustrate the process of creating analytic adapters and devising custom ontologies for specific use cases through a <a href="demonstration-fwa.htm">demonstration</a>.
+ - Provide a [test client]({{ site.baseurl }}{% link tangerine/test-client.md  %}) to exercise the services
+ - Illustrate the process of creating analytic adapters and devising custom
+   ontologies for specific use cases through a [demonstration]({{
+   site.baseurl }}{% link tangerine/demo.md  %})
 
 ## References
  1. MITRE <a href="http://technologyroundtable.org" target="blank">Analytic Technology Industry Roundtable</a> site, 2017.
