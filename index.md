@@ -4,7 +4,9 @@ title: Analysis Exchange (AE)
 ---
 
 
-Welcome to the developer site for the Analysis Exchange (AE). For information on the prototype, Tangerine, visit [https://analytic-roundtable.github.io/tangerine](https://analytic-roundtable.github.io/tangerine).
+Welcome to the developer site for the Analysis Exchange (AE). For information
+on the prototype, Tangerine, visit the [Tangerine Documentation]({{
+site.baseurl }}{% link tangerine/index.md  %})  
 
 This effort is guided by the industry consortium <b><a href="http://technologyroundtable.org" target="new">Analytic Technology Industry Roundtable</a></b>. As the name implies, the AE is a set of design patterns and ontologies for exchanging data between analytic solutions.  While the AE offers a system concept for exchanging data, the focus is on the partnerships formed among analytic technology organizations. The aim of these partnerships is to achieve common goals and efficiencies, build competitive advantages, and more effectively respond to customer needs by sharing information. 
 

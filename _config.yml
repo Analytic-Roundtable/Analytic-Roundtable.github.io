@@ -17,7 +17,7 @@ tangerine:
   url: https://github.com/Analytic-Roundtable/tangerine
 
 baseurl:      ""
-url: https://github.com/Analytic-Roundtable
+url: https://analytic-roundtable.github.io/
 
 #Build settings
 markdown: kramdown
