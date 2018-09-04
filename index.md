@@ -1,4 +1,10 @@
-Welcome to the developer site for the Analysis Exchange (AE).
+---
+layout: default
+title: Analysis Exchange (AE)
+---
+
+
+Welcome to the developer site for the Analysis Exchange (AE). For information on the prototype, Tangerine, visit [https://analytic-roundtable.github.io/tangerine](https://analytic-roundtable.github.io/tangerine).
 
 This effort is guided by the industry consortium <b><a href="http://technologyroundtable.org" target="new">Analytic Technology Industry Roundtable</a></b>. As the name implies, the AE is a set of design patterns and ontologies for exchanging data between analytic solutions.  While the AE offers a system concept for exchanging data, the focus is on the partnerships formed among analytic technology organizations. The aim of these partnerships is to achieve common goals and efficiencies, build competitive advantages, and more effectively respond to customer needs by sharing information. 
 
@@ -9,7 +15,7 @@ The AE debuts November 2017. As a developer, domain analyst, integrator, or visi
 * [Analysis Exchange Model 1.0 Software Design](http://technologyroundtable.org/pdfs/Analysis-Exchange-Model1-Design-2017.pdf)
 * [Why Work with the Roundtable?](http://technologyroundtable.org/pdfs/Why-Work-With-The-Roundtable.pdf) 
 
-<h1>Technical Materials</h1>
+# Technical Materials
 This site provides technical documents, use cases and reference implementations that embody the Analysis Exchange. After reading the design document above, the next logical items to digest are the ontologies and then the use cases to see how they are applied.  All of this information is hosted on GitHub at [https://github.com/Analytic-Roundtable](https://github.com/Analytic-Roundtable).  These resources are also summarized in a [flyer](http://technologyroundtable.org/pdfs/Roundtable-Resources.pdf)
 
 * [Upper Ontology for the Analysis Exchange Model 1.0](https://github.com/Analytic-Roundtable/Analysis-Exchange/raw/master/AnalysisExchange-Upper-Ontology-2017.pdf)

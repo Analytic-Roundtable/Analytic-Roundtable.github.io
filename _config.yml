@@ -1,18 +1,23 @@
-theme: jekyll-theme-architect
+theme: jekyll-theme-minimal
 
 # Site settings
-title:        Analytic Roundtable
-tagline:      Collaboration in data analytics.
-description:      Collaboration in data analytics.
-logo: img/analytic-roundtable-logo-txt.png
+title: Analytic Roundtable
+tagline: Collaboration in data analytics.
+description: Collaboration in data analytics.
+logo: /assets/img/analytic-roundtable-logo-txt.png
 
 # About/contact
-author:   ubaldino@mitre.org
+author: ubaldino@mitre.org
+author: atrivedi@mitre.org
+
+tangerine:
+  title: Tangerine
+  description: A Reference Implementation of Analysis Exchange Concepts
+  logo: /assets/img/tangerine-logo.png
+  url: https://github.com/Analytic-Roundtable/tangerine
 
 baseurl:      ""
-url: http://analytic-exchange.github.io
+url: https://github.com/Analytic-Roundtable
 
 #Build settings
 markdown: kramdown
-kramdown:
-auto_ids: true
