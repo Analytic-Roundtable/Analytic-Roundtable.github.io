@@ -14,9 +14,10 @@ tangerine:
   title: Tangerine
   description: A Reference Implementation of Analysis Exchange Concepts
   logo: /assets/img/tangerine-logo.png
+  url: https://github.com/Analytic-Roundtable/tangerine
 
 baseurl:      ""
-url: http://analytic-exchange.github.io
+url: https://github.com/Analytic-Roundtable
 
 #Build settings
 markdown: kramdown
