@@ -4,7 +4,9 @@ title: Installation
 ---
 
 # Server and Client Demo Installation
-This chapter covers both the installation of the server web services and the test client with the demonstration scripts and data (see [Demo]({{ site.baseurl}}{% link tangerine/demo.md  %})
+This chapter covers both the installation of the server web services and the
+test client with the demonstration scripts and data (see [Demo]({{
+site.baseurl}}{% link tangerine/demo.md  %}))
         
 # Server Installation
 
@@ -24,4 +26,4 @@ Using Ubuntu 16.04, walk through the following APT package installs. The critica
  - Tomcat 8 
  - MongoDB
 
-See [tangerine/install-deb] (https://github.com/Analytic-Roundtable/tangerine/blob/master/install-deb)
+See [tangerine/install-deb](https://github.com/Analytic-Roundtable/tangerine/blob/master/install-deb)
